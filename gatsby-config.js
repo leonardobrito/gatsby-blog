@@ -10,7 +10,7 @@ module.exports = {
                   to the design, development, maintenance, testing, and evaluation
                   of computer software.`,
     author: `@mushileiro`,
-    siteUrl: `https://mushileiro.netlify.com/`,
+    siteUrl: `https://mushileiro.netlify.com`,
   },
   plugins: [
     `gatsby-plugin-transition-link`,
