@@ -11,10 +11,10 @@ export default function BlogPost({
   data: {
     markdownRemark: {
       fields: {
-        slug
+        _slug
       },
       frontmatter: {
-        title, date, description
+        title, date, description, image
       },
       html,
       timeToRead
@@ -24,7 +24,11 @@ export default function BlogPost({
 }) {
   return (
     <Layout>
-      <SEO title={title} />
+      <SEO
+        title={title}
+        description={description}
+        image={image}
+      />
       <PostHeader>
         <PostDate>
           {date} • {timeToRead} min de leitura
@@ -51,6 +55,7 @@ export const query = graphql`
         title
         description
         date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
+        image
       }
       html
       timeToRead

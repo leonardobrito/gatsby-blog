@@ -6,6 +6,8 @@ import SEO from '../components/seo';
 import PostItem from '../components/PostItem';
 import Pagination from '../components/Pagination';
 
+import { ListWrapper } from '../components/ListWrapper/styles';
+
 export default function BlogList({
   data: { allMarkdownRemark: { edges: posts }},
   pageContext: { currentPage, numPages},
@@ -17,25 +19,26 @@ export default function BlogList({
   return (
     <Layout>
       <SEO title="Home" />
-
-      {posts.map(({
-        node: {
-          fields: { slug },
-          frontmatter: { background, category, date, description, title },
-          timeToRead
-        }
-      }) => (
-        <PostItem
-          key={slug}
-          slug={slug}
-          background={background}
-          category={category}
-          date={date}
-          timeToRead={timeToRead}
-          title={title}
-          description={description}
-        />
-      ))}
+      <ListWrapper>
+        {posts.map(({
+          node: {
+            fields: { slug },
+            frontmatter: { background, category, date, description, title },
+            timeToRead
+          }
+        }) => (
+          <PostItem
+            key={slug}
+            slug={slug}
+            background={background}
+            category={category}
+            date={date}
+            timeToRead={timeToRead}
+            title={title}
+            description={description}
+          />
+        ))}
+      </ListWrapper>
       <Pagination
         isFirst={isFirst}
         isLast={isLast}

@@ -2,12 +2,13 @@ import React from 'react';
 
 import Layout from '../components/Layout';
 import SEO from '../components/seo';
+import Search from '../components/Search'
 
-export default function AboutPage() {
+export default function SearchPage() {
   return (
     <Layout>
-      <SEO title="About" />
-      <h1>About Page</h1>
+      <SEO title="Search" />
+      <Search />
     </Layout>
   );
 }
