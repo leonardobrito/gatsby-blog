@@ -1,8 +1,6 @@
 backend:
   name: github
   repo: leonardobrito/gatsby-blog
-  branch: master
-  site_domain: https://mushileiro.netlify.com
 
 publish_mode: editorial_workflow
 media_folder: 'static/assets/images'
