@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: willianjusten/gatsby-course
+  repo: leonardobrito/gatsby-blog
   branch: master
   site_domain: https://mushileiro.netlify.com
 
