@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import scrollTo from 'gatsby-plugin-smoothscroll';
 import { Home } from 'styled-icons/boxicons-solid/Home';
 import { SearchAlt2 as Search } from 'styled-icons/boxicons-regular/SearchAlt2';
 import { UpArrowAlt as Arrow } from 'styled-icons/boxicons-regular/UpArrowAlt';
@@ -73,7 +74,7 @@ export default function Menubar() {
           {isListMode ? <Grid /> : <List />}
         </MenuBarItem>
         <MenuBarItem title="Ir para o Topo">
-          <Arrow />
+          <Arrow onClick={() => scrollTo('body')}/>
         </MenuBarItem>
       </MenuBarGroup>
     </MenuBarWrapper>
